@@ -82,7 +82,7 @@ export default function Navbar() {
 
       {/* Mobile Nav */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-slate-900 border-b border-slate-800 py-4 px-6 flex flex-col gap-4">
+        <div className="md:hidden absolute top-full left-0 w-full bg-slate-900 border-b border-slate-800 py-4 px-6 flex flex-col gap-4 shadow-xl">
           {navLinks.map((link) => (
             <a 
               key={link.name} 
@@ -93,6 +93,26 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
+          
+          <div className="h-px w-full bg-slate-800 my-1"></div>
+          
+          <a 
+            href="/Adhwaide_Krishna_Resume.pdf" 
+            target="_blank" 
+            rel="noreferrer" 
+            className="flex items-center gap-2 text-base font-medium text-cyan-400 hover:text-cyan-300 w-full"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <ExternalLink size={18} /> View Resume
+          </a>
+          <a 
+            href="/Adhwaide_Krishna_Resume.pdf" 
+            download="Adhwaide_Krishna_Resume.pdf"
+            className="flex items-center gap-2 text-base font-medium text-cyan-400 hover:text-cyan-300 w-full"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <Download size={18} /> Download Resume
+          </a>
         </div>
       )}
     </nav>
