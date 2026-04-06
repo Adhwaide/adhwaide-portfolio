@@ -49,7 +49,7 @@ export const projects = [
       "AI-generated conversational responses",
       "Natural language understanding"
     ],
-    github: "https://github.com/Adhwaide", 
+    github: "https://github.com/Adhwaide/AI-Assistant-Local",
     liveUrl: "",
     details: {
       extendedDescription: "Emphasis was placed on creating a responsive and modular pipeline that can be extended with additional capabilities such as task automation and real-time assistance.",
