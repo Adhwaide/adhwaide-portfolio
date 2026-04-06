@@ -89,7 +89,7 @@ export const projects = [
       "Real-time encrypted messaging",
       "Lightweight and fast architecture"
     ],
-    github: "https://github.com/Adhwaide",
+    github: "https://github.com/Adhwaide/-anonchat-frontend",
     liveUrl: "",
     details: {
       extendedDescription: "Implemented real-time communication using WebSockets, ensuring low-latency interaction and smooth user experience even with multiple concurrent users.",
