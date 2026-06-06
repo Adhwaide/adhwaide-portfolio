@@ -110,7 +110,7 @@ export const projects = [
       "Proximity-driven interaction hub"
     ],
     github: "https://github.com/Adhwaide",
-    liveUrl: "",
+    liveUrl: "https://nearconnect-97756.web.app",
     details: {
       extendedDescription: "The concept combines location awareness with interest-based matching to create meaningful and context-aware connections in real time.",
       architecture: "An integrated application using precise geolocation APIs pinging a centralized server to calculate real-time haversine distances natively.",
