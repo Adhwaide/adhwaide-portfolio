@@ -90,7 +90,7 @@ export const projects = [
       "Lightweight and fast architecture"
     ],
     github: "https://github.com/Adhwaide/-anonchat-frontend",
-    liveUrl: "",
+    liveUrl: "https://anonchat-frontend-qjo9.onrender.com/chat.html",
     details: {
       extendedDescription: "Implemented real-time communication using WebSockets, ensuring low-latency interaction and smooth user experience even with multiple concurrent users.",
       architecture: "Client-server architecture relying heavily on optimized WebSocket connections to handle real-time bi-directional messaging without persistence layers.",
