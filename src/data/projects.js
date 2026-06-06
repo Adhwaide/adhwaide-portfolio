@@ -118,5 +118,29 @@ export const projects = [
       learnings: "Navigated complex user privacy protocols alongside efficient geospatial querying in NoSQL environments.",
       future: "Implementation of localized event discovery and temporary network meshes."
     }
+  },
+  {
+  id: 7,
+  title: "AI-Powered Vedic Astrology Platform",
+  description: "Developed an interactive astrology platform that generates detailed Vedic horoscope insights using AI-driven analysis. The system combines traditional North Indian chart interpretation with modern web technologies for an accessible user experience.",
+  tech: ["React","JavaScript","AI","Vedic Astrology","Responsive Design"],
+  features: [
+    "North Indian horoscope chart analysis",
+    "AI-generated astrological interpretations",
+    "Career, wealth, and relationship insights",
+    "Interactive and responsive user interface",
+    "Personalized horoscope reports"
+  ],
+
+  github: "https://github.com/Adhwaide/astro",
+  liveUrl: "https://adhwaide.github.io/astro/",
+
+  details: {
+    extendedDescription:"Built a modern astrology platform that leverages AI to analyze Vedic horoscope charts and generate structured astrological insights. The application simplifies complex astrological concepts by providing users with clear interpretations related to personality, career, finances, relationships, and life patterns through an intuitive web interface.",
+    architecture:"Designed a client-side web application using React and JavaScript. User inputs are processed through an AI-powered analysis workflow that structures astrological data into meaningful insights. The interface is optimized for responsiveness and accessibility across desktop and mobile devices.",
+    challenges:"One of the primary challenges was transforming complex astrological calculations and interpretations into a user-friendly experience. Ensuring consistency in generated insights while maintaining an intuitive interface required careful design and prompt engineering.",
+    learnings:"Gained practical experience in integrating AI-driven content generation into a web application, designing structured user experiences, and translating domain-specific knowledge into clear and accessible outputs. Improved skills in frontend architecture, prompt design, and user-centric development.",
+    future:"Future enhancements include support for detailed Dasha analysis, transit predictions, compatibility matching, multilingual support, PDF horoscope report generation, user accounts, and advanced AI models capable of providing deeper astrological forecasting."
   }
+}  
 ];

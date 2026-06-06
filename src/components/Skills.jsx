@@ -21,19 +21,22 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
-      <div className="flex items-center gap-3 mb-10">
+    <section data-animate="true" id="skills" className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+      <div data-animate="true" className="flex items-center gap-3 mb-10"
+      >
         <h2 className="text-4xl font-extrabold text-white tracking-tight">Technical Arsenal</h2>
         <div className="h-px bg-slate-800 flex-grow ml-4"></div>
       </div>
 
       {/* Core Strengths (Highlighted) */}
       <div className="flex flex-wrap gap-4 mb-16">
-        <div className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-cyan-950 to-blue-950 border border-cyan-500/50 rounded-2xl shadow-[0_0_20px_rgba(6,182,212,0.3)] animate-fade-in-up">
+        <div data-animate="true" className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-cyan-950 to-blue-950 border border-cyan-500/50 rounded-2xl shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:scale-105 transition-transform duration-300"
+        >
           <Sparkles className="text-cyan-400 animate-pulse" size={20} />
           <span className="text-white font-bold tracking-wide">Vibe Coding</span>
         </div>
-        <div className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-indigo-950 to-purple-950 border border-indigo-500/50 rounded-2xl shadow-[0_0_20px_rgba(99,102,241,0.3)] animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+        <div data-animate="true" className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-indigo-950 to-purple-950 border border-indigo-500/50 rounded-2xl shadow-[0_0_20px_rgba(99,102,241,0.3)] hover:scale-105 transition-transform duration-300"
+        >
           <Sparkles className="text-indigo-400 animate-pulse" size={20} />
           <span className="text-white font-bold tracking-wide">Prompt Engineering</span>
         </div>
@@ -41,7 +44,10 @@ export default function Skills() {
 
       <div className="grid md:grid-cols-3 gap-8">
         {skillCategories.map((cat, i) => (
-          <div key={i} className="glass-card p-10 rounded-[2rem] group hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-500">
+          <div
+            key={i}
+            data-animate="true" className="glass-card p-10 rounded-[2rem] group hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-500"
+          >
             <div className="transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 origin-bottom-left">
               {cat.icon}
             </div>

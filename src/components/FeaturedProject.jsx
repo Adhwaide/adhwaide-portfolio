@@ -7,15 +7,19 @@ export default function FeaturedProject() {
   const featuredProjects = projects.slice(0, 2); // Get top 2 projects
 
   return (
-    <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
-      <div className="flex items-center gap-3 mb-10">
+    <section data-animate="true" className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+      <div data-animate="true" className="flex items-center gap-3 mb-10"
+      >
         <h2 className="text-4xl font-extrabold text-white tracking-tight">Featured Work</h2>
         <div className="h-px bg-slate-800 flex-grow ml-4"></div>
       </div>
 
       <div className="flex flex-col gap-12">
         {featuredProjects.map((featured, index) => (
-          <div key={featured.id} className="glass-card rounded-[2rem] overflow-hidden group hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-500">
+          <div
+            key={featured.id}
+            data-animate="true" className="glass-card rounded-[2rem] overflow-hidden group hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-500 hover:scale-[1.01]"
+          >
             <div className="grid md:grid-cols-2 gap-0 relative">
               
               {/* Image / Graphic Visual representation */}

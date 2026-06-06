@@ -22,9 +22,10 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 py-4 ${
-      isScrolled ? 'bg-slate-950/70 backdrop-blur-xl border-b border-white/5 shadow-lg shadow-black/20' : 'bg-transparent'
-    }`}>
+    <div className={`fixed top-0 w-full z-50 transition-all duration-500 py-4 ${
+        isScrolled ? 'bg-slate-950/70 backdrop-blur-xl border-b border-white/5 shadow-lg shadow-black/20' : 'bg-transparent'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         <a href="#" className="text-xl font-extrabold tracking-tighter text-white flex items-center gap-1 group relative">
           <div className="w-8 h-8 rounded bg-cyan-500 text-slate-950 flex items-center justify-center text-sm mr-1 group-hover:rotate-12 transition-transform shadow-[0_0_15px_rgba(6,182,212,0.8)]">A</div>
@@ -81,40 +82,45 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Nav */}
-      {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-slate-900 border-b border-slate-800 py-4 px-6 flex flex-col gap-4 shadow-xl">
-          {navLinks.map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href}
-              className="text-base font-medium text-slate-300 hover:text-cyan-400 w-full"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {link.name}
-            </a>
-          ))}
-          
-          <div className="h-px w-full bg-slate-800 my-1"></div>
-          
-          <a 
-            href="/Adhwaide_Krishna_Resume.pdf" 
-            target="_blank" 
-            rel="noreferrer" 
-            className="flex items-center gap-2 text-base font-medium text-cyan-400 hover:text-cyan-300 w-full"
-            onClick={() => setMobileMenuOpen(false)}
+      
+        {mobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 w-full bg-slate-900 border-b border-slate-800 flex flex-col gap-4 shadow-xl overflow-hidden"
           >
-            <ExternalLink size={18} /> View Resume
-          </a>
-          <a 
-            href="/Adhwaide_Krishna_Resume.pdf" 
-            download="Adhwaide_Krishna_Resume.pdf"
-            className="flex items-center gap-2 text-base font-medium text-cyan-400 hover:text-cyan-300 w-full"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            <Download size={18} /> Download Resume
-          </a>
-        </div>
-      )}
-    </nav>
+            <div className="py-4 px-6 flex flex-col gap-4">
+              {navLinks.map((link) => (
+                <a 
+                  key={link.name} 
+                  href={link.href}
+                  className="text-base font-medium text-slate-300 hover:text-cyan-400 w-full transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </a>
+              ))}
+              
+              <div className="h-px w-full bg-slate-800 my-1"></div>
+              
+              <a 
+                href="/Adhwaide_Krishna_Resume.pdf" 
+                target="_blank" 
+                rel="noreferrer" 
+                className="flex items-center gap-2 text-base font-medium text-cyan-400 hover:text-cyan-300 w-full transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <ExternalLink size={18} /> View Resume
+              </a>
+              <a 
+                href="/Adhwaide_Krishna_Resume.pdf" 
+                download="Adhwaide_Krishna_Resume.pdf"
+                className="flex items-center gap-2 text-base font-medium text-cyan-400 hover:text-cyan-300 w-full transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <Download size={18} /> Download Resume
+              </a>
+            </div>
+          </div>
+        )}
+      
+    </div>
   );
 }

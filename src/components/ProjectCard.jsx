@@ -18,7 +18,7 @@ export default function ProjectCard({ project }) {
   return (
     <>
       <div 
-        className="glass-card rounded-[1.5rem] overflow-hidden flex flex-col group hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 relative h-full glow-cyan-hover"
+        data-animate="true" className="project-card glass-card rounded-[1.5rem] overflow-hidden flex flex-col group relative h-full glow-cyan-hover"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         <div className="p-8 flex-grow flex flex-col relative z-10">
@@ -33,10 +33,26 @@ export default function ProjectCard({ project }) {
             </button>
           </div>
           
-          <div className="mb-4 flex-grow">
-            <p className="text-sm text-slate-300 mb-2 leading-relaxed">
-              {project.description}
-            </p>
+          <div className="mb-4 flex-grow relative overflow-hidden">
+            <div className="transform transition-transform duration-500 group-hover:-translate-y-8">
+              <p className="text-sm text-slate-300 mb-2 leading-relaxed">
+                {project.description}
+              </p>
+            </div>
+            
+            {/* Hover Reveal: Tech Stack */}
+            <div className="absolute bottom-0 left-0 right-0 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 pointer-events-none flex flex-wrap gap-2">
+              {project.tech.slice(0, 4).map((t, idx) => (
+                <span key={idx} className="px-2 py-1 bg-cyan-950/80 text-cyan-400 text-[10px] sm:text-xs rounded border border-cyan-500/30 font-mono shadow-sm">
+                  {t}
+                </span>
+              ))}
+              {project.tech.length > 4 && (
+                <span className="px-2 py-1 bg-slate-800/80 text-slate-400 text-[10px] sm:text-xs rounded border border-slate-700/50 font-mono shadow-sm">
+                  +{project.tech.length - 4}
+                </span>
+              )}
+            </div>
           </div>
 
           <div className="flex items-center gap-4 mt-auto pt-4 border-t border-slate-800/50">
@@ -70,7 +86,7 @@ export default function ProjectCard({ project }) {
           ></div>
           
           {/* Modal Content */}
-          <div className="relative bg-slate-900 border border-slate-700 rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl flex flex-col z-10 animate-fade-in-up">
+          <div className="relative bg-slate-900 border border-slate-700 rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl flex flex-col z-10">
              {/* Modal Header */}
              <div className="sticky top-0 bg-slate-900/95 backdrop-blur border-b border-slate-800 p-6 flex justify-between items-center z-20">
                <div>
@@ -121,12 +137,12 @@ export default function ProjectCard({ project }) {
                </section>
 
                <div className="grid md:grid-cols-2 gap-8">
-                 <section className="bg-slate-800/50 p-5 rounded-lg border border-slate-700/50">
+                 <section data-animate="true" className="bg-slate-800/50 p-5 rounded-lg border border-slate-700/50">
                    <h4 className="text-base font-semibold text-white mb-2">Challenges Faced</h4>
                    <p className="text-sm leading-relaxed">{project.details.challenges}</p>
                  </section>
 
-                 <section className="bg-slate-800/50 p-5 rounded-lg border border-slate-700/50">
+                 <section data-animate="true" className="bg-slate-800/50 p-5 rounded-lg border border-slate-700/50">
                    <h4 className="text-base font-semibold text-white mb-2">Key Learnings</h4>
                    <p className="text-sm leading-relaxed">{project.details.learnings}</p>
                  </section>

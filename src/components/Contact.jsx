@@ -8,7 +8,8 @@ export default function Contact() {
       {/* Background Effect */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-96 bg-cyan-900/10 rounded-[100%] blur-[120px] pointer-events-none"></div>
 
-      <div className="max-w-4xl mx-auto text-center relative z-10 glass-card p-12 md:p-20 rounded-[3rem] border-t-0 border-b-0 border-slate-900/50">
+      <div data-animate="true" className="max-w-4xl mx-auto text-center relative z-10 glass-card p-12 md:p-20 rounded-[3rem] border-t-0 border-b-0 border-slate-900/50"
+      >
         <h2 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-8">Let's build something.</h2>
         <p className="text-slate-400 text-xl mb-12 max-w-2xl mx-auto font-light leading-relaxed">
           I'm currently looking for new opportunities. Whether you have a question, a project idea, or just want to discuss ML architectures, my inbox is open.
@@ -16,7 +17,7 @@ export default function Contact() {
 
         <a 
           href="mailto:adhwaidekrishna@gmail.com" 
-          className="inline-flex items-center gap-3 px-10 py-5 bg-white text-slate-950 hover:bg-slate-200 font-bold rounded-2xl transition-transform hover:-translate-y-1 hover:shadow-xl hover:shadow-white/10 mb-20 text-lg"
+          className="inline-flex items-center gap-3 px-10 py-5 bg-white text-slate-950 hover:bg-slate-200 font-bold rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 active:scale-95 shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:shadow-[0_0_25px_rgba(6,182,212,0.4)] mb-20 text-lg"
         >
           <Mail size={24} />
           Say Hello

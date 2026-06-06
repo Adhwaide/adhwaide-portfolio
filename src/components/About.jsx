@@ -3,8 +3,9 @@ import { Network } from 'lucide-react';
 
 export default function About() {
   return (
-    <section id="about" className="py-32 px-6 md:px-12 max-w-5xl mx-auto">
-      <div className="glass-card rounded-[2rem] p-10 md:p-16 relative overflow-hidden group hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-500">
+    <section data-animate="true" id="about" className="py-32 px-6 md:px-12 max-w-5xl mx-auto">
+      <div data-animate="true" className="glass-card rounded-[2rem] p-10 md:p-16 relative overflow-hidden group hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-500"
+      >
         {/* Background Accent */}
         <div className="absolute -top-10 -right-10 p-12 opacity-5 text-slate-100 group-hover:scale-110 transition-transform duration-700">
           <Network size={250} />
