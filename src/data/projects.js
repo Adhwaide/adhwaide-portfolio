@@ -131,10 +131,8 @@ export const projects = [
     "Interactive and responsive user interface",
     "Personalized horoscope reports"
   ],
-
   github: "https://github.com/Adhwaide/astro",
   liveUrl: "https://adhwaide.github.io/astro/",
-
   details: {
     extendedDescription:"Built a modern astrology platform that leverages AI to analyze Vedic horoscope charts and generate structured astrological insights. The application simplifies complex astrological concepts by providing users with clear interpretations related to personality, career, finances, relationships, and life patterns through an intuitive web interface.",
     architecture:"Designed a client-side web application using React and JavaScript. User inputs are processed through an AI-powered analysis workflow that structures astrological data into meaningful insights. The interface is optimized for responsiveness and accessibility across desktop and mobile devices.",
@@ -142,5 +140,21 @@ export const projects = [
     learnings:"Gained practical experience in integrating AI-driven content generation into a web application, designing structured user experiences, and translating domain-specific knowledge into clear and accessible outputs. Improved skills in frontend architecture, prompt design, and user-centric development.",
     future:"Future enhancements include support for detailed Dasha analysis, transit predictions, compatibility matching, multilingual support, PDF horoscope report generation, user accounts, and advanced AI models capable of providing deeper astrological forecasting."
   }
-}  
+  },
+  {
+  id: 8,
+  title: "CatalystAI – Causal Stock Intelligence & Knowledge Graph Platform",
+  description:"An AI-powered market intelligence platform that transforms real-world events into actionable investment insights using knowledge graphs, causal reasoning, and historical market intelligence.",
+  tech: ["Python","FastAPI","React","NetworkX","Knowledge Graphs","Machine Learning","Artificial Intelligence","Data Science","Financial Analysis","Algorithmic Trading","NLP","Graph Analytics"],
+  features: ["Knowledge Graph-Based Market Intelligence","Event-to-Stock Causal Reasoning Engine","Historical Event Memory & Pattern Recognition","Portfolio Simulation & Backtesting","Explainable AI Recommendations","Interactive Relationship Visualization","Market Catalyst Detection","Research & Diagnostics Platform"],
+  github: "https://github.com/Adhwaide/Catalyst",
+  liveUrl: "",
+  details: {
+    extendedDescription:"CatalystAI is a next-generation financial intelligence platform designed to understand why markets move rather than simply predicting price movements. The system converts unstructured information such as news events, government policies, economic developments, commodity price changes, and corporate announcements into a structured knowledge graph. By modeling relationships between events, industries, supply chains, commodities, and companies, CatalystAI can identify potential investment opportunities through causal reasoning. The project combines artificial intelligence, graph analytics, and financial research methodologies to create an explainable stock discovery and market intelligence platform.",
+    architecture:"The platform follows a modular architecture consisting of a data ingestion layer, knowledge graph engine, causal reasoning engine, event memory system, scoring framework, backtesting module, and visualization layer. Real-world events are processed and transformed into graph entities and relationships using NetworkX. The causal reasoning engine traverses the graph to identify downstream beneficiaries and affected companies. Historical event memory stores prior market reactions, enabling statistical validation and pattern recognition. FastAPI serves as the backend API layer, while React and React Flow are planned for high-density interactive visualizations and graph exploration.",
+    challenges:"One of the most challenging aspects of the project was designing a framework capable of converting unstructured market information into structured causal relationships. Building meaningful connections between events, policies, commodities, industries, and companies required careful graph design and validation. Another challenge involved ensuring that the system remained explainable while producing useful investment insights. Developing a scalable architecture that can eventually support real-time market data, autonomous graph expansion, and large-scale event processing also required significant planning.",
+    learnings:"This project provided hands-on experience in knowledge graph construction, graph analytics, financial data analysis, causal inference concepts, AI system architecture, backtesting methodologies, and large-scale data modeling. It reinforced the importance of data quality, explainability, and structured reasoning in AI systems. The development process also highlighted how future AI applications may depend less on larger models and more on the ability to collect, structure, and reason over vast amounts of interconnected data.",
+    future:"The long-term vision for CatalystAI is to evolve into an autonomous market intelligence platform capable of continuously collecting and processing real-time global information. Planned enhancements include live news ingestion pipelines, autonomous knowledge graph expansion, event-driven alerts, multi-agent financial reasoning systems, advanced portfolio construction tools, institutional-grade research dashboards, and predictive market intelligence. Beyond stock analysis, the platform can potentially be extended to commodities, cryptocurrencies, macroeconomic forecasting, supply-chain intelligence, and broader economic decision-making systems. The ultimate goal is to create a continuously learning AI that builds and maintains a living map of how real-world events influence financial markets."
+  }
+  }
 ];
